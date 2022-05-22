@@ -7,6 +7,8 @@ gem 'puma', require: false
 gem 'sinatra', require: 'sinatra/base'
 gem 'ulid'
 gem 'rack-cache'
+gem 'oj'
+gem 'oj_mimic_json'
 
 group :development do
   gem 'sinatra-contrib'

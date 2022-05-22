@@ -19,6 +19,8 @@ GEM
     mysql2-cs-bind (0.1.0)
       mysql2
     nio4r (2.5.7)
+    oj (3.13.13)
+    oj_mimic_json (1.0.1)
     puma (5.3.2)
       nio4r (~> 2.0)
     rack (2.2.3)
@@ -51,6 +53,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  arm64-darwin-20
   x86_64-darwin-20
   x86_64-linux
 
@@ -58,6 +61,8 @@ DEPENDENCIES
   activesupport
   mysql2
   mysql2-cs-bind
+  oj
+  oj_mimic_json
   puma
   rack-cache
   simplecov

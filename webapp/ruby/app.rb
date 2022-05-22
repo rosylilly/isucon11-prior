@@ -2,6 +2,7 @@ require 'sinatra/json'
 require 'active_support/json'
 require 'active_support/time'
 require_relative 'db'
+require_relative 'oj'
 
 Time.zone = 'UTC'
 
@@ -12,7 +13,7 @@ class App < Sinatra::Base
   set :sessions, key: 'session_isucon2021_prior', expire_after: 3600
   set :show_exceptions, false
   set :public_folder, './public'
-  set :json_encoder, ActiveSupport::JSON
+  set :json_encoder, OjEncoder.new
 
   helpers do
     def db
