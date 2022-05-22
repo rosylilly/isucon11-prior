@@ -14,7 +14,8 @@ CREATE TABLE `schedules` (
   `id`         VARCHAR(255) PRIMARY KEY NOT NULL,
   `title`      VARCHAR(255) NOT NULL DEFAULT '',
   `capacity`   INT UNSIGNED NOT NULL DEFAULT 0,
-  `created_at` DATETIME(6) NOT NULL
+  `created_at` DATETIME(6) NOT NULL,
+  `reserved` INT UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4;
 
 DROP TABLE IF EXISTS `reservations`;
