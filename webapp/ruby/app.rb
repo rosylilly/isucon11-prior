@@ -40,7 +40,9 @@ class App < Sinatra::Base
     end
 
     def current_user
-      db.xquery('SELECT * FROM `users` WHERE `id` = ? LIMIT 1', session[:user_id]).first
+      return @current_user if instance_variable_defined?(:@current_user)
+
+      @current_user = db.xquery('SELECT * FROM `users` WHERE `id` = ? LIMIT 1', session[:user_id]).first
     end
 
     def get_reservations(schedule)
