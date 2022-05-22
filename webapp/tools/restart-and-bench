@@ -2,6 +2,10 @@
 
 set -e
 
+# checkout main
+git fetch origin
+git reset --hard origin/main
+
 # nginx のログを削除
 echo ":: CLEAR LOGS       ====>"
 sudo truncate -s 0 -c /var/log/nginx/access.log
